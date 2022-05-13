@@ -1,6 +1,22 @@
 function validaCPF(cpf) {
   if (cpf.length !== 11) {
     return false;
+  }
+  if (
+    [
+      "00000000000",
+      "11111111111",
+      "22222222222",
+      "33333333333",
+      "44444444444",
+      "55555555555",
+      "66666666666",
+      "77777777777",
+      "88888888888",
+      "99999999999",
+    ].indexOf(cpf) !== -1
+  ) {
+    return false;
   } else {
     var numeros = cpf.substring(0, 9);
     var digitos = cpf.substring(9);
